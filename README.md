@@ -1,4 +1,4 @@
 # Jogo da Velha
-Usando Expo e React-Native
+Usando Expo
 
 _Estou trabalhando nesse projeto ainda!_
