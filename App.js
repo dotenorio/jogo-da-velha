@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
+
+const { width } = Dimensions.get("window");
+const windowWidth = (width * 90) / 100;
+const windowWidthPart = windowWidth / 3;
 
 const players = ["O", "X"];
 const colors = ["#faafff", "#bbcfff"];
@@ -130,14 +134,15 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: "#192965",
-    padding: "5vw",
-    width: "100vw",
-    borderBottomWidth: "5px",
+    padding: 5,
+    width: width,
+    borderBottomWidth: 5,
     borderBottomColor: "#bbcfff"
   },
   headerText: {
     color: "#f0efef",
-    fontSize: "10vw",
+    fontSize: 50,
+    padding: 20,
     textAlign: "center"
   },
   board: {
@@ -148,46 +153,47 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     flexWrap: "wrap",
     alignContent: "center",
-    padding: "5vw"
+    padding: 5
   },
   rect: {
-    width: "calc(90vw / 3)",
-    height: "calc(90vw / 3)"
+    width: windowWidthPart,
+    height: windowWidthPart
   },
   rectText: {
     textAlign: "center",
-    lineHeight: "calc(90vw / 3)",
-    height: "calc(90vw / 3)",
-    fontSize: "20vw",
+    lineHeight: windowWidthPart,
+    height: windowWidthPart,
+    fontSize: 100,
     textShadowColor: "#192965",
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 3
   },
   rectBorder: {
-    borderWidth: "2px"
+    borderWidth: 2
   },
   rectBorderTop: {
-    borderTopWidth: "2px"
+    borderTopWidth: 2
   },
   rectBorderRight: {
-    borderRightWidth: "2px"
+    borderRightWidth: 2
   },
   rectBorderBottom: {
-    borderBottomWidth: "2px"
+    borderBottomWidth: 2
   },
   rectBorderLeft: {
-    borderLeftWidth: "2px"
+    borderLeftWidth: 2
   },
   footer: {
     backgroundColor: "#f0efef",
-    padding: "5vw",
-    width: "100vw",
-    borderTopWidth: "1px",
+    padding: 5,
+    width: width,
+    borderTopWidth: 1,
     borderTopColor: "#faafff"
   },
   footerText: {
     color: "#192965",
-    fontSize: "3vw",
+    fontSize: 12,
+    padding: 10,
     textAlign: "center"
   }
 });
